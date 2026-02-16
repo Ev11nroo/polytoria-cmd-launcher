@@ -1,6 +1,6 @@
 # polytoria-cmd-launcher
 
-launch polytoria from a command
+launch polytoria from a command (who even needs this)
 
 > [!IMPORTANT]
 > wont actually work because cloudflare will block the request
@@ -18,3 +18,24 @@ install nodejs then:
 3. enter a place id from url
 
 4. run `node index.js`
+
+## how its done
+
+a POST request to `https://polytoria.com/api/places/join` is made with your cookie + the following body:
+
+```json
+{
+    "placeID": id
+}
+```
+
+the json response is like this:
+
+```json
+{
+    "success": true,
+    "token": "string"
+}
+```
+
+the uri is the following: `polytoria://client/token` where `token` is from the response
