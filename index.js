@@ -17,12 +17,12 @@ async function getLaunchToken() {
     const response = await fetch("https://polytoria.com/api/places/join", options);
     const data = (await response).json();
 
-    if (data.success !== true) {
+    if ((await data).success !== true) {
         console.error(`endpoint failed (${(await response).status})`);
         return 1;
     }
 
-    return data.token;
+    return (await data).token;
 }
 
 (async () => {
