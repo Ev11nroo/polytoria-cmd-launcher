@@ -85,3 +85,16 @@ async function getLaunchToken() {
 })();
 
 ```
+
+## arguments
+
+client: `Polytoria\ Client.x86_64 -network client -token TOKEN_FROM_API`
+
+creator: `Polytoria\ Creator.x86_64 -token TOKEN_FROM_API`
+
+launcher: 
+
+- client stable: `launcher polytoria://client/TOKEN_FROM_API`
+- client beta: `launcher polytoria://clientbeta/BETATOKEN_FROM_API`
+- creator stable: `launcher polytoria://creator/TOKEN_FROM_API`
+- client beta: `launcher polytoria://creatorbeta/TOKEN_FROM_API`
